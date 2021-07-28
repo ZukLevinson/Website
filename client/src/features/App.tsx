@@ -2,9 +2,9 @@ import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { setMode } from './navbar/modeSlice';
 
-import './App.scss';
+import styles from './App.module.scss';
 
-import { Navbar } from './navbar/Navbar'
+import { Navbar } from './navbar/Navbar';
 
 function App() {
   // Erase ! in order to work correctly
@@ -18,8 +18,10 @@ function App() {
   }, [])
 
   return (
-    <div className={`app ${isDark ? "darkmode" : "lightmode"}`}>
-      <Navbar setDarkMode={changeDarkMode}   />
+    <div className={`${styles.app} ${isDark ? "darkmode" : "lightmode"}`}>
+      <div className={styles.content}>
+        <Navbar />
+      </div>
     </div>
   );
 }

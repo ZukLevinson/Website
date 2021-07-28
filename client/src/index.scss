@@ -16,12 +16,15 @@ body {
 }
 
 .darkmode {
-  --background: rgb(56, 56, 56);
+  --background: rgb(5, 0, 60);
+  --primary-color: #e2e2e2;
+  --secondary-color: #9b9b9b;
 }
 
 .lightmode {
   --background: rgb(233, 233, 233);
   --primary-color: #343a40;
+  --secondary-color: #64686d;
 }
 
 @font-face {
