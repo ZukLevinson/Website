@@ -1,0 +1,30 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+* {
+  font-family: "Work Sans";
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+}
+
+.darkmode {
+  --background: rgb(56, 56, 56);
+}
+
+.lightmode {
+  --background: rgb(233, 233, 233);
+  --primary-color: #343a40;
+}
+
+@font-face {
+  font-family: "Work Sans";
+  src: local("Work Sans"), url("./assets/fonts/WorkSans-VariableFont_wght.ttf");
+}
