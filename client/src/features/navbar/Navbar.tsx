@@ -16,9 +16,6 @@ export function Navbar() {
 
     return (
         <div className={styles.container}>
-            {/* <div className={styles.header}>
-                <span>Hi, I'm Zuk</span>
-            </div> */}
             <div className={styles.icons} onClick={() => dispatch(setMode(!isDark))}>
                 <div>
                     {isDark ? <SunIcon /> : <MoonIcon/>}
