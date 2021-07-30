@@ -11,7 +11,7 @@ import Projects from './github/Projects';
 function App() {
   // Erase ! in order to work correctly
   const { isDark } = useSelector((state: any) => state.mode);
-  const { bio } = useSelector((state: any) => state.github);
+  const { name, bio } = useSelector((state: any) => state.github);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -27,7 +27,7 @@ function App() {
       <div className={styles.content}>
         <div className={styles["sub-content"]}>
           <div className={styles.header}>
-            <span>Hello, <br/> I'm Zuk</span>
+            <span>Hello, <br/> I'm {name.split(" ")[0]}</span>
           </div>
 
           <div className={styles.description}>
