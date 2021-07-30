@@ -17,15 +17,21 @@ body {
 }
 
 .darkmode {
-  --background: rgb(5, 0, 60);
+  --background: rgb(43, 43, 43);
   --primary-color: #e2e2e2;
   --secondary-color: #9b9b9b;
+  --primary-text-color: #2b2b2b;
+  --secondary-text-color: #5a5a5a;
+  --active-text-color: rgb(48, 21, 121);
 }
 
 .lightmode {
   --background: rgb(233, 233, 233);
   --primary-color: #343a40;
   --secondary-color: #64686d;
+  --primary-text-color: #e2e2e2;
+  --secondary-text-color: #c4c4c4;
+  --active-text-color: rgb(48, 21, 121);
 }
 
 @font-face {

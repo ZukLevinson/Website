@@ -6,6 +6,7 @@ import styles from './App.module.scss';
 
 import { Navbar } from './navbar/Navbar';
 import { setGithubData } from './github/githubSlice';
+import Projects from './github/Projects';
 
 function App() {
   // Erase ! in order to work correctly
@@ -15,13 +16,10 @@ function App() {
 
   useEffect(() => {
     dispatch(setMode(!(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches)));
-    
+
     fetch(`https://api.github.com/users/${process.env.REACT_APP_USERNAME}`)
       .then(res => res.json())
-      .then(data => {
-        console.log(data, process.env);
-        dispatch(setGithubData(data));
-      });
+      .then(data => dispatch(setGithubData(data)));
   }, [])
 
   return (
@@ -35,6 +33,8 @@ function App() {
           <div className={styles.description}>
             <p>{bio}</p>
           </div>
+
+          <Projects/>
         </div>
         <Navbar />
       </div>

@@ -23,15 +23,15 @@ export function Navbar() {
             </div>
 
             <div className={styles.social}>
-                <div>
+                <a href="https://www.twitter.com/ZukLevinson">
                     <TwitterIcon/>
-                </div>
-                <div>
+                </a>
+                <a href="https://www.facebook.com/zuklevinson/">
                     <FacebookIcon/>
-                </div>
-                <div>
+                </a>
+                <a href="https://www.linkedin.com/in/zuk-levinson-abb753150">
                     <LinkedInIcon/>
-                </div>
+                </a>
             </div>
         </div>
     )
