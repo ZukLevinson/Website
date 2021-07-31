@@ -1,5 +1,5 @@
 # Stage for building the production version of the project
-FROM node:16-alpine AS builder
+FROM arm32v7/node:16-alpine AS builder
 
 WORKDIR /app
 
@@ -11,7 +11,7 @@ RUN npm run build
 
 
 # Stage for serving as production
-FROM node:16-alpine AS production
+FROM arm32v7/node:16-alpine AS production
 
 LABEL version="1.0"
 LABEL maintainer="Zuk Levinson"
