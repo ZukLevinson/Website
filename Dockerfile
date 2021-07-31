@@ -7,7 +7,7 @@ COPY ["package.json", "package-lock.json", "./"]
 COPY . .
 
 RUN npm install -g npm
-RUN npm install --production --silent
+RUN npm install --production
 RUN npm run build
 
 
