@@ -6,6 +6,7 @@ WORKDIR /app
 COPY ["package.json", "package-lock.json", "./"]
 COPY . .
 
+RUN npm install -g npm
 RUN npm install --production --silent
 RUN npm run build
 
@@ -19,6 +20,7 @@ LABEL maintainer="Zuk Levinson"
 WORKDIR /app
 
 COPY --from=builder /app/build  .
+RUN npm install -g npm
 RUN npm install -g serve
 
 EXPOSE 3000
