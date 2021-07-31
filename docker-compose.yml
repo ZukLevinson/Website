@@ -1,0 +1,6 @@
+services:
+    app:
+        # platform: linux/arm/v7
+        build: ./
+        ports:
+            - 80:3000
